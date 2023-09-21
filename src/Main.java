@@ -8,14 +8,30 @@ public class Main {
         System.out.print("How many people are in your group: ");
         String people = scan.nextLine();
         System.out.print("What is the tip percentage(0-100): ");
-        String tip = scan.nextLine();
+        double tip = scan.nextDouble();
         int number = 0;
-        while (number != 1) {
-            System.out.print("No silly, i said EVEN not odd! Try again: ");
+        double total = 0;
+        while (number != -1) {
+            System.out.print("Enter a cost in dollars and cents, e.g. 12.50 (-1 to end): ");
             number = scan.nextInt();
-
-
+            total += number;
 
         }
+        total++;
+        System.out.print("Total bill before tip: $"+total);
+        System.out.print("total percemtage: "+tip+"%");
+        double tipTotal = 0;
+        tip *=.01;
+        tipTotal = total * tip;
+        System.out.print("total tip: $" + tipTotal);
+        total = total + tipTotal;
+        System.out.print("total bill with tip: $"+ total);
+        System.out.print(total);
+
+
+
+
+
+
     }
 }
